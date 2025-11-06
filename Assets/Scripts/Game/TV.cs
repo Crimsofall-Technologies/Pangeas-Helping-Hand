@@ -17,15 +17,15 @@ namespace CrimsofallTechnologies.XR.Gameplay
         private GameObject InsertedTape;
         private Vector3[] tapePos;
         private Quaternion[] tapeRot;
-        private Animator animator;
-        private bool hasTape, ejecting = false;
+        private bool hasTape;
         private Rigidbody tapeRB;
+        private AudioSource source;
 
         private void Start()
         {
             player.Stop();
             blackScreen.SetActive(true);
-            animator = GetComponent<Animator>();
+            source = GetComponent<AudioSource>();
 
             //record tape positions!
             tapePos = new Vector3[Tapes.Length];
@@ -95,6 +95,9 @@ namespace CrimsofallTechnologies.XR.Gameplay
             if(CurrentTape == "PURPLE_TAPE") player.clip = clips[3];
             player.Play(); //auto play the movie for the inserted tape!
             blackScreen.SetActive(false);
+
+            //play sound too
+            source.PlayOneShot(source.clip, source.volume);
         }
 
         private void OnTriggerEnter(Collider other)

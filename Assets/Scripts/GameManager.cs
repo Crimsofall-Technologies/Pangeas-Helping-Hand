@@ -43,13 +43,24 @@ public class GameManager : MonoBehaviour
     public bool IsDay { get; set; }
     public bool EnteredEntrance { get; private set; }
 
+    public int points { get; private set; }
+    public void AddPoints(int amount)
+    {
+        points += amount;
+        ui.UpdateUI();
+    }
+    public void RemovePoints(int amount)
+    {
+        points -= amount;
+        ui.UpdateUI();
+    }
+
     public void SetDayNightValue(bool value)
     {
         IsDay = value;
 
         //set day/night sun light
         SetupSceneLight();
-        //DynamicGI.UpdateEnvironment();
     }
 
     public void OnEnteredEntrance()
@@ -162,7 +173,8 @@ public class GameManager : MonoBehaviour
     {
         PlayerData data = new PlayerData()
         {
-            inventoryData = playerInventory.GetAllItems(),
+            inventoryData = playerInventory.GetAllItems(), 
+            points = points,
         };
         PlayerDataSaver.SaveData(data);
     }
@@ -173,8 +185,10 @@ public class GameManager : MonoBehaviour
 
         if (data != null) {
             playerInventory.ApplyLoadedData(data);
+            points = data.points;
         }
 
         playerObject.GetComponentInChildren<GravityProvider>().useGravity = true;
+        ui.UpdateUI();
     }
 }

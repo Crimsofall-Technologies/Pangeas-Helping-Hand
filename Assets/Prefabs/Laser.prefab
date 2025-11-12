@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc623fcecc34d344796cb75295266748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebug: 1
   lineRenderer: {fileID: 8884372033657852573}
   checkPoint: {fileID: 42267700972208123}
   decalEffect: {fileID: 1419470298466892503, guid: ea1fabb5d8817dc489bb31df61bd52f8, type: 3}
@@ -250,7 +251,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c5eafa3fa1a01a04988e8da720cdb16e, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c5eafa3fa1a01a04988e8da720cdb16e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4

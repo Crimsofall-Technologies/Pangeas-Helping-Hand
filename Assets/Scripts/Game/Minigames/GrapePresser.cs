@@ -9,10 +9,12 @@ public class GrapePresser : MonoBehaviour
 
     private Vector3 originalPos;
     private bool inside;
+	private AudioSource source;
 
     private void Start()
     {
         originalPos = transform.position;
+		source = GetComponent<AudioSource>();
     }
 
     public void OnTriggerEnter(Collider collider)
@@ -33,6 +35,9 @@ public class GrapePresser : MonoBehaviour
             transform.position = new Vector3(originalPos.x, transform.position.y - yRemoveOffset, originalPos.z);
             Instantiate(jarPrefab, jarSpawnArea.position, Quaternion.identity);
             inside = true;
+			
+			//play a sound
+			source.PlayOneShot(source.clip, source.volume);
         }
     }
 

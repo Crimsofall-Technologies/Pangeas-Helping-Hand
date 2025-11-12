@@ -4,4 +4,5 @@ using UnityEngine;
 public class PlayerData
 {
     public Item[] inventoryData;
+    public int points = 0;
 }

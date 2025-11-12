@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public Image hpFill;
+    public Text pointsText;
     public Animator loadingAnimator;
     public GameObject playerInventoryGO;
     public ItemVar testItem;
@@ -69,6 +70,7 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
         hpFill.fillAmount = (float)pHealth.currentHealth / (float)pHealth.maxHealth;
+        pointsText.text = "Score: "+GameManager.Instance.points + "";
     }
 
     public void FakeLoading()

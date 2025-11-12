@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
@@ -33,4 +33,21 @@ public class PlayerHandObjectTracker : MonoBehaviour
         
         return null;
     }
+    
+	//break any joints to connected rigidbodies! 
+	public void BreakJoints()
+	{
+		GameObject gR = GetRightHandObject();
+		GameObject gL = GetLeftHandObject();
+		
+		if(gR != null)
+		{
+			Destroy(gR.GetComponentInChildren<Joint>());
+		}
+		
+		if(gL != null)
+		{
+			Destroy(gL.GetComponentInChildren<Joint>());
+		}
+	}
 }

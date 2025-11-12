@@ -11,6 +11,11 @@ TagManager:
   - Fire
   - Grape
   - NoCollision
+  - Ball
+  - Concrete
+  - Grass
+  - Water
+  - Wood
   layers:
   - Default
   - TransparentFX

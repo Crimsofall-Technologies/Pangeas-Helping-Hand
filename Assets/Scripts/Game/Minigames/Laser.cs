@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    public bool showDebug = false;
     public LineRenderer lineRenderer;
     public Transform checkPoint;
     public GameObject decalEffect;
     public float laserLength = 4f;
     public float speed = 10f;
+
+    private bool done;
 
     private void Start()
     {
@@ -24,31 +27,39 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
+		if(lineRenderer.enabled == false) return;
+		
         // Move the entire laser object forward
         transform.position += transform.forward * speed * Time.deltaTime;
-
-        /*if (Physics.SphereCast(checkPoint.position, 0.25f, transform.forward, out RaycastHit hit))
-        {
-            if (hit.collider.tag != "Player" && hit.collider.tag != "Laser")
-            {
-                Destroy(gameObject);
-                Destroy(Instantiate(decalEffect, hit.point, Quaternion.LookRotation(-hit.normal)), 1f);
-            }
-        }*/
     }
-
-    /*private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(checkPoint.position, 0.25f);
-    }*/
     
     private void OnTriggerEnter(Collider other)
     {
+        //ignore triggers
+        if(other.isTrigger || done) return;
+
         if (other.tag != "Player" && other.tag != "Laser" && other.tag != "NoCollision")
         {
-            Destroy(gameObject);
+            if(showDebug)
+                Debug.Log("Laser hit: " + other.name);
+
+			lineRenderer.enabled = false;
+            Destroy(gameObject, 5f);
             Destroy(Instantiate(decalEffect, checkPoint.position, Quaternion.identity), 1f);
+
+            done = true;
+
+            MovingBoards boards = other.GetComponent<MovingBoards>();
+            if(boards!=null)
+            {
+                //add/remove points!
+                if(boards.removePoints)
+                    GameManager.Instance.RemovePoints(boards.points);
+                else
+                    GameManager.Instance.AddPoints(boards.points);
+
+                boards.animator.SetBool("Hit", true);
+            }
         }
     }
 }

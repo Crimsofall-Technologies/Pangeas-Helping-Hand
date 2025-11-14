@@ -16,6 +16,7 @@ TagManager:
   - Grass
   - Water
   - Wood
+  - Key
   layers:
   - Default
   - TransparentFX

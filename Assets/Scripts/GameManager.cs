@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Gravity;
 
@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    public int maxFramerate = 60;
+	public int maxFramerate = 60;
+	public float levelLoadDelay = 2f;
     public Material skyLight, skyDark;
 
     public bool LoadingLevel { get; private set; }
@@ -161,7 +162,7 @@ public class GameManager : MonoBehaviour
         sceneM = null;
         if (ui != null)
             ui.loadingAnimator.SetBool("Open", true);
-        Invoke(nameof(DelayedLoadLevel), 1f);
+	    Invoke(nameof(DelayedLoadLevel), levelLoadDelay);
     }
 
     private void DelayedLoadLevel()

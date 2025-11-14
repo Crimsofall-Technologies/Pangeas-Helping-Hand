@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+﻿using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,17 +11,23 @@ namespace CrimsofallTechnologies.XR.Interaction {
 		public Transform player;
         public AudioClip musicClip; //this will be played when moving to this entrance area!
 
+	    //an object player needs to enter this place  - will be destroyed and unlocked
+	    public GameObject key;
+
         private XROrigin xR;
-		
+	    private bool Locked = false;
 		private float distanceToEnter = 3f;
 
         public override void Start()
         {
             IsEntrance = true;
             base.Start();
-            xR = playerBody.GetComponent<XROrigin>();
-
-            GetComponent<BoxCollider>().isTrigger = true;
+	        xR = playerBody.GetComponent<XROrigin>();
+            
+	        if(key != null)
+	        	Locked = true;
+	        else
+            	GetComponent<BoxCollider>().isTrigger = true;
         }
 
         /*private void Update()
@@ -66,8 +72,16 @@ namespace CrimsofallTechnologies.XR.Interaction {
         {
             if(GameManager.Instance.EnteredEntrance)
                 return;
+			
+	        if(key != null && Locked && other.tag == "Key" && other.gameObject == key)
+	        {
+	        	Locked = false;
+	        	GetComponent<Collider>().isTrigger = true;
+	        	Destroy(other.gameObject);
+	        }
 
-            if(other.tag == "Player")
+
+	        if(other.tag == "Player" && !Locked)
             {
                 GameManager.Instance.OnEnteredEntrance();
                 Teleport();

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using cherrydev;
 using System;
@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour
 	}
 
     public void OnTalked(bool allowRestrictions = true)
-    {
+	{
         if((allowRestrictions && DisableTalk) || dialogBehaviour._isDialogStarted)
             return;
 		

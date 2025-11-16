@@ -942,7 +942,7 @@ MonoBehaviour:
   dayObjects: []
   nightObjects: []
   musicClipDay: {fileID: 8300000, guid: c0aab415556f5064ead0fec9ddb65c77, type: 3}
-  musicClipNight: {fileID: 0}
+  musicClipNight: {fileID: 8300000, guid: 5a54e4e7fd52e824bb2806575b8ab55e, type: 3}
 --- !u!1 &272671620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   teleportPoint: {fileID: 1288022294}
   player: {fileID: 3690244813568927251}
   musicClip: {fileID: 0}
+  key: {fileID: 0}
 --- !u!65 &367601954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3710,6 +3711,7 @@ MonoBehaviour:
   teleportPoint: {fileID: 1564167545}
   player: {fileID: 3690244813568927251}
   musicClip: {fileID: 0}
+  key: {fileID: 0}
 --- !u!65 &925735405
 BoxCollider:
   m_ObjectHideFlags: 0

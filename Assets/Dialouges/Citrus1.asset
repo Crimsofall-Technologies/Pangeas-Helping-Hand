@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6581566394225439770
+--- !u!114 &-7031502665633155736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,24 +15,25 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -32.5
-    y: 178.5
+    x: 246
+    y: 66
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Citrus
-    Text: New face on the island huh? Hope you don't mind eating just fruit for your
-      diet.
+    CharacterName: Clementine
+    Text: There's a hidden entrance to deeper into the citrus caves around here,
+      maybe sometime you'll find it and i can show you more.
     CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: -810906653528417324}
+  ParentNodes:
+  - {fileID: 2453597907713392559}
+  ChildNode: {fileID: 3573729334461043169}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
---- !u!114 &-5307547633823519998
+--- !u!114 &-703369225959807798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,77 +48,23 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 659
-    y: 200
+    x: 522
+    y: 326
     width: 190
     height: 135
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: ending
     Text: 
     CharacterSprite: {fileID: 0}
   ParentNodes:
-  - {fileID: -4419013262677688946}
+  - {fileID: 3573729334461043169}
   ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
---- !u!114 &-4419013262677688946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
-  m_Name: Answer Node
-  m_EditorClassIdentifier: 
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 481
-    y: 393
-    width: 190
-    height: 115
-  IsDragging: 1
-  IsSelected: 0
-  Answers:
-  - Leave...
-  AnswerKeys: []
-  ParentNodes: []
-  ChildNodes:
-  - {fileID: -5307547633823519998}
---- !u!114 &-810906653528417324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
-  m_Name: Answer Node
-  m_EditorClassIdentifier: 
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 213
-    y: 72
-    width: 190
-    height: 115
-  IsDragging: 1
-  IsSelected: 0
-  Answers:
-  - where do you sleep?
-  AnswerKeys: []
-  ParentNodes:
-  - {fileID: -6581566394225439770}
-  ChildNodes: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,18 +78,74 @@ MonoBehaviour:
   m_Name: Citrus1
   m_EditorClassIdentifier: 
   NodesList:
-  - {fileID: -6581566394225439770}
-  - {fileID: -4419013262677688946}
-  - {fileID: -5307547633823519998}
-  - {fileID: -810906653528417324}
-  - {fileID: 4502348298425023992}
+  - {fileID: -703369225959807798}
+  - {fileID: 3573729334461043169}
+  - {fileID: 7020950768985049208}
+  - {fileID: 2453597907713392559}
+  - {fileID: -7031502665633155736}
   VariablesConfig: {fileID: 0}
   _localizationTableName: 
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 0
---- !u!114 &4502348298425023992
+--- !u!114 &2453597907713392559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -23
+    y: 273
+    width: 190
+    height: 115
+  IsDragging: 1
+  IsSelected: 1
+  Answers:
+  - Where do you sleep?
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 7020950768985049208}
+  ChildNodes:
+  - {fileID: -7031502665633155736}
+--- !u!114 &3573729334461043169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 454
+    y: 173
+    width: 190
+    height: 115
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Leave...
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -7031502665633155736}
+  ChildNodes:
+  - {fileID: -703369225959807798}
+--- !u!114 &7020950768985049208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,18 +160,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 276
-    y: 244
+    x: -17
+    y: 87
     width: 190
     height: 135
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
-    Text: 
+    CharacterName: Clementine
+    Text: New face on the island huh? Hope you don't mind eating just fruit for your
+      diet.
     CharacterSprite: {fileID: 0}
   ParentNodes: []
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 2453597907713392559}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 

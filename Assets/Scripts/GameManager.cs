@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
         {
             Application.targetFrameRate = maxFramerate;
             DontDestroyOnLoad(gameObject);
-            Instance = this;
+	        Instance = this;
+	        CanEnterEntrances = true;
             SceneManager.sceneLoaded += OnSceneLoadComplete;
 
             //always start in day!
@@ -42,7 +43,8 @@ public class GameManager : MonoBehaviour
     private string sceneName;
     public bool InteractedRecent { get; private set; } //has recently interacted with something?
     public bool IsDay { get; set; }
-    public bool EnteredEntrance { get; private set; }
+	public bool EnteredEntrance { get; private set; }
+	public bool CanEnterEntrances { get; set; }
 
     public int points { get; private set; }
     public void AddPoints(int amount)

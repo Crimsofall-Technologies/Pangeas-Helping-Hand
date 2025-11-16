@@ -11,7 +11,7 @@ namespace CrimsofallTechnologies.XR.Interaction {
 		public Transform player;
         public AudioClip musicClip; //this will be played when moving to this entrance area!
 
-	    //an object player needs to enter this place  - will be destroyed and unlocked
+	    [Tooltip("the object player needs to enter this place  - will be destroyed and unlocked")]
 	    public GameObject key;
 
         private XROrigin xR;
@@ -71,7 +71,10 @@ namespace CrimsofallTechnologies.XR.Interaction {
         private void OnTriggerEnter(Collider other)
         {
             if(GameManager.Instance.EnteredEntrance)
-                return;
+	            return;
+	            
+	        if(!GameManager.Instance.CanEnterEntrances)
+	        	return;
 			
 	        if(key != null && Locked && other.tag == "Key" && other.gameObject == key)
 	        {

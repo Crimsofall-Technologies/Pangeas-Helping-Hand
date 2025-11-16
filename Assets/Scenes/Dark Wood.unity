@@ -575,6 +575,114 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7301738766801530882, guid: 8423d19f8c10b404e88a5d01acfd517c, type: 3}
+--- !u!1 &299365333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299365334}
+  - component: {fileID: 299365337}
+  - component: {fileID: 299365336}
+  - component: {fileID: 299365335}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &299365334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299365333}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.005341, y: 3.6693966, z: -22.008545}
+  m_LocalScale: {x: 1.3196819, y: 2.3605843, z: 0.15087844}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8999335841201204840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &299365335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299365333}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &299365336
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299365333}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 942d5dd024b42614eb043c5d36d5bd20, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &299365337
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299365333}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &299620216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3063,7 +3171,7 @@ MonoBehaviour:
   teleportPoint: {fileID: 610781125}
   player: {fileID: 8901736300020683705}
   musicClip: {fileID: 8300000, guid: f5044cc6a02b735478c6b54337ef4a50, type: 3}
-  key: {fileID: 8438294749262064025}
+  key: {fileID: 0}
 --- !u!114 &1301493837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4325,7 +4433,7 @@ GameObject:
   - component: {fileID: 1194513298769661080}
   - component: {fileID: 8916979269526515768}
   - component: {fileID: 849225576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: house inside
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -4535,7 +4643,7 @@ GameObject:
   - component: {fileID: 4871561117148437917}
   - component: {fileID: 2940973460429884768}
   - component: {fileID: 4871561117148437918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4715,7 +4823,7 @@ Transform:
   m_GameObject: {fileID: 8438294749262064025}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4128026, y: 0.5741029, z: 0.5741026, w: 0.41280285}
-  m_LocalPosition: {x: -12.33, y: 1.517, z: -17.764}
+  m_LocalPosition: {x: -13, y: 1.517, z: -18.7}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4733,7 +4841,7 @@ GameObject:
   - component: {fileID: 4119793224365002359}
   - component: {fileID: 2038910195964069048}
   - component: {fileID: 4447887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5688,7 +5796,7 @@ GameObject:
   - component: {fileID: 4848846171182925677}
   - component: {fileID: 4551193693561118747}
   - component: {fileID: 1042228415}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: house outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8101,7 +8209,7 @@ GameObject:
   - component: {fileID: 6027577077176524818}
   - component: {fileID: 8245790860250067891}
   - component: {fileID: 521595213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gazebo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9672,6 +9780,7 @@ GameObject:
   - component: {fileID: 1042228413}
   - component: {fileID: 8904476396456965871}
   - component: {fileID: 8904476396456965870}
+  - component: {fileID: 8904476396456965872}
   m_Layer: 0
   m_Name: key
   m_TagString: Key
@@ -9974,7 +10083,7 @@ GameObject:
   - component: {fileID: 6013064457672958971}
   - component: {fileID: 1781435505444913109}
   - component: {fileID: 1238759956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10185,10 +10294,58 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8904476396456965872}
+        m_TargetAssemblyTypeName: DarkWoodKey, Assembly-CSharp
+        m_MethodName: OnPick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 299365335}
+        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8904476396456965872}
+        m_TargetAssemblyTypeName: DarkWoodKey, Assembly-CSharp
+        m_MethodName: OnDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 299365335}
+        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -10287,6 +10444,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8904476396456965872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438294749262064025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacc5a0435cb88f43bb9b0cfbe267896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPos: {fileID: 626631252}
+  player: {fileID: 8901736300020683705}
 --- !u!23 &8916979269526515768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10463,6 +10634,7 @@ Transform:
   - {fileID: 2198169893405662879}
   - {fileID: 1301493832}
   - {fileID: 1015442862}
+  - {fileID: 299365334}
   m_Father: {fileID: 203200489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9010600104004098886

@@ -11,7 +11,7 @@ public class DarkWoodKey : MonoBehaviour
 	{
 		if(!firstPicked)
 		{
-			player.transform.position = teleportPos.position;
+			//player.transform.position = teleportPos.position;
 			firstPicked = true;
 		}
 		

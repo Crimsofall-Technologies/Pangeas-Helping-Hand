@@ -17,6 +17,8 @@ TagManager:
   - Water
   - Wood
   - Key
+  - Brush
+  - Canvas
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - UI
   - Interactable
   - No_Col
-  - 
+  - Painting
   - 
   - 
   - 

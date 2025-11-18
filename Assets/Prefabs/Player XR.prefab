@@ -8094,7 +8094,7 @@ MonoBehaviour:
   movementTracker: {fileID: 913261681256271582}
   gravity: {fileID: 2747822188588173296}
   concreteSteps: {fileID: 8300000, guid: 4e028d29cbf10bc47bb79ca734b36ed0, type: 3}
-  grassStep: {fileID: 8300000, guid: 880e2bcfd48c26148ac676cda2250e18, type: 3}
+  grassStep: {fileID: 8300000, guid: 4d70d820b2097014fa262a11e271f510, type: 3}
   woodStep: {fileID: 8300000, guid: 4b02982483c981546a5876a8421d3bcf, type: 3}
   waterStep: {fileID: 8300000, guid: e695b546bb3455747ab25824d96d580e, type: 3}
   stepDelay: 0.5
